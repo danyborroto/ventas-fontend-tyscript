@@ -1,4 +1,5 @@
 import { Producto } from '@/utils/types'
+import { TableContainer, Paper, Table, TableHead, TableRow, TableCell, TableBody } from "@mui/material";
 import './style.css'
 
 interface TablaProductosProps {
@@ -7,38 +8,46 @@ interface TablaProductosProps {
 
 const TablaProductos: React.FC<TablaProductosProps> = ({ data }) => {
     return (
-        <table>
-            <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>Name</th>
-                    <th>Price</th>
-                    <th>Amount</th>
-                </tr>
-            </thead>
-            <tbody>
-                {
-                    data.map(producto => {
+        <TableContainer>
+            <Table>
+                <TableHead >
+                    <TableRow>
+                        <TableCell >
+                            ID
+                        </TableCell>
+                        <TableCell>
+                            Name
+                        </TableCell>
+                        <TableCell>
+                            Price
+                        </TableCell>
+                        <TableCell>
+                            Amount
+                        </TableCell>
+                    </TableRow>
+                </TableHead>
+                <TableBody>
+                    {data.map((item: Producto) => {
                         return (
-                            <tr key={producto.id}>
-                                <td>
-                                    {producto.id}
-                                </td>
-                                <td>
-                                    {producto.name}
-                                </td>
-                                <td>
-                                    {`$ ${producto.price}`}
-                                </td>
-                                <td>
-                                    {producto.amount}
-                                </td>
-                            </tr>
+                            <TableRow key={item.id}>
+                                <TableCell align='right'>
+                                    {item.id}
+                                </TableCell>
+                                <TableCell>
+                                    {item.name}
+                                </TableCell>
+                                <TableCell align='right'>
+                                    {`$${item.price}`}
+                                </TableCell>
+                                <TableCell align='right'>
+                                    {item.amount}
+                                </TableCell>
+                            </TableRow>
                         )
-                    })
-                }
-            </tbody>
-        </table>
+                    })}
+                </TableBody>
+            </Table>
+        </TableContainer>
     )
 }
 
