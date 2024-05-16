@@ -2,7 +2,6 @@ import { Producto } from '@/utils/types'
 import Table from '@/components/my-components/table/Table'
 import TableColumn from '../my-components/table/TableColumn';
 import TableRow from '@/components/my-components/table/TableRow'
-import './style.css'
 
 interface TablaProductosProps {
     data: Producto[];

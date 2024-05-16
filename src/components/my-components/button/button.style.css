@@ -18,6 +18,7 @@
 
 .success {
     background-color: #54d350;
+    color: #fff;
 }
 
 .success:hover {

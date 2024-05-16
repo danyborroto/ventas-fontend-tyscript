@@ -1,15 +1,17 @@
 'use client'
-import './style.css'
+import './button.style.css'
 
 interface ButtonProps {
-    text: string
+    children: string | any;
+    type: string;
+    onCLick: () => void;
 }
 
-const Button: React.FC<ButtonProps> = ({ text }) => {
+const Button: React.FC<ButtonProps> = ({ children, type, onCLick }) => {
     return (
-        <button className='button middle normal'>
-            {text}
-        </button>
+        <button className={`button middle ${type}`} onClick={onCLick}>
+            {children}
+        </button >
     )
 }
 
