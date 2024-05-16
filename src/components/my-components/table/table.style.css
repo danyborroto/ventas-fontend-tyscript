@@ -1,0 +1,15 @@
+.align-left {
+    text-align: left;
+}
+
+.align-rigth {
+    text-align: right;
+}
+
+/*.table-simple tbody tr:nth-child(2n) {
+    background-color: #f2f2f2;
+}*/
+
+.table-simple tbody tr:hover {
+    background-color: #e2e2e2;
+}
