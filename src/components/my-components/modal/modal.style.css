@@ -24,7 +24,6 @@
 .modal-header {
     padding: 10px;
     border-bottom: 1px solid #a2a2a2;
-    text-align: right;
 }
 
 .modal-header button {
@@ -33,6 +32,7 @@
     font-size: 15px;
     font-weight: bold;
     cursor: pointer;
+    float: right;
 }
 
 .modal-header button:hover {

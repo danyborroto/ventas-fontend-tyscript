@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react'
 import { Producto } from "@/utils/types";
 import Button from "@/components/my-components/button/Button";
 import Modal from "@/components/my-components/modal/Modal";
+import ProductoForm from "./ProductoForm";
 
 
 export default function ProductPage() {
@@ -33,13 +34,14 @@ export default function ProductPage() {
                 <TablaProductos data={datos} />
             </div>
             <Modal
+                title={'Add new product'}
                 isOpen={isModalOpen}
                 onSuccess={() => console.log('Click en Aceptar')
                 }
                 onClose={closeModal}
             >
                 <div>
-                    <p>adasd</p>
+                    <ProductoForm />
                 </div>
             </Modal>
         </>
