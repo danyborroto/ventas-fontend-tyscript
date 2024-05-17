@@ -11,7 +11,7 @@ const TablaProductos: React.FC<TablaProductosProps> = ({ data }) => {
     return (
         <Table>
             <TableColumn
-                content={['ID', 'Nombre', 'Precio', 'Cantidad']}>
+                content={['ID', 'Nombre', 'Precio', 'Cantidad', '']}>
             </TableColumn>
             <TableRow data={data} />
         </Table >
